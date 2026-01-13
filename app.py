@@ -1,12 +1,13 @@
 import streamlit as st
 import pandas as pd
-import pickle
+import joblib
 
 @st.cache_resource
 def load_model():
-    with open('music_predictor.pkl','rb') as f:
-        model_data = pickle.load(f)
-    return model_data['model'], model_data['scaler']
+    data = joblib.load("music_predictor.pkl")
+    return data["model"], data["scaler"]
+
+model, scaler = load_model()
 
 # Load model and scaler at the start
 model, scaler = load_model()  # ← Added: need to load before using
@@ -77,4 +78,5 @@ if st.button("🎯 Predict"):
     
     st.write(f"**Confidence:** {probs[0]:.1%}")
     st.progress(probs[0])
+
 
