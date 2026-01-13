@@ -77,3 +77,4 @@ if st.button("🎯 Predict"):
     
     st.write(f"**Confidence:** {probs[0]:.1%}")
     st.progress(probs[0])
+
