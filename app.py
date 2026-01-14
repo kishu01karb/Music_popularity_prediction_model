@@ -9,8 +9,6 @@ def load_model():
 
 model, scaler = load_model()
 
-# Load model and scaler at the start
-model, scaler = load_model()  # ← Added: need to load before using
 
 # Define features list
 features = [
@@ -78,5 +76,6 @@ if st.button("🎯 Predict"):
     
     st.write(f"**Confidence:** {probs[0]:.1%}")
     st.progress(probs[0])
+
 
 
