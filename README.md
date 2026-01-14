@@ -125,6 +125,9 @@ pip install pandas numpy matplotlib seaborn scikit-learn
 * Feature importance provides meaningful insights
 
 ---
+## 🚀 Live Demo
+👉 https://musicpopularitypredictionmodel-lh8gocrdgsdcnavxyknrdh.streamlit.app/
+
 
 ## 🔮 Future Improvements
 
